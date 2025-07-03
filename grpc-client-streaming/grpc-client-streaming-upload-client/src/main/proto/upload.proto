@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc";
+option java_outer_classname = "FileUploadProto";
+
+service FileUploader {
+  rpc UploadFile (stream FileChunk) returns (UploadStatus);
+}
+
+message FileChunk {
+  string filename = 1;
+  bytes content = 2;
+}
+
+message UploadStatus {
+  bool success = 1;
+  string message = 2;
+}
