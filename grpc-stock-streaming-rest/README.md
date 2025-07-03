@@ -8,10 +8,14 @@ gRPC (1.54.0)
 Protocol Buffers (proto3)
 Maven
 WebFlux + Server-Sent Events (SSE) for REST integration
-2.Generate gRPC Java Code mvn clean compile
 
-3. Run the Application mvn spring-boot:run
+**2.Generate gRPC Java Code** mvn clean compile
 
-📡 API Endpoints 🔁 Server-Side Streaming via gRPC gRPC Method: rpc StreamStockPrices (StockRequest) returns (stream StockResponse); Sends one StockRequest with stock symbol Receives multiple StockResponse messages with random prices
 
-🌐 REST to gRPC Streaming via SSE GET - http://localhost:8080/api/stream?symbol=AAPL
+**3. Run the Application** mvn spring-boot:run
+
+
+**📡 API Endpoints** 🔁 Server-Side Streaming via gRPC gRPC Method: rpc StreamStockPrices (StockRequest) returns (stream StockResponse); Sends one StockRequest with stock symbol Receives multiple StockResponse messages with random prices
+
+
+**🌐 REST to gRPC Streaming via SSE GE**T - http://localhost:8080/api/stream?symbol=AAPL
