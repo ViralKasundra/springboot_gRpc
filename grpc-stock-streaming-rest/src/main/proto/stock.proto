@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.example.grpc";
+option java_outer_classname = "StockProto";
+
+service StockTicker {
+  rpc StreamStockPrices (StockRequest) returns (stream StockResponse);
+}
+
+message StockRequest {
+  string symbol = 1;
+}
+
+message StockResponse {
+  string symbol = 1;
+  double price = 2;
+}
