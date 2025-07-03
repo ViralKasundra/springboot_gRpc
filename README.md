@@ -4,7 +4,7 @@ This project demonstrates how to implement **server-side streaming** using **gRP
 
 ---
 
-## 🔧 Technologies Used
+## 1.🔧 Technologies Used
 
 - Java 11
 - Spring Boot 2.7.x
@@ -12,24 +12,6 @@ This project demonstrates how to implement **server-side streaming** using **gRP
 - Protocol Buffers (proto3)
 - Maven
 - WebFlux + Server-Sent Events (SSE) for REST integration
-
----
-
-## 📂 Project Structure
-
-grpc-stock-streaming/
-├── src/
-│ ├── main/
-│ │ ├── java/com/example/grpc/
-│ │ │ ├── GrpcApplication.java # Main Spring Boot app
-│ │ │ ├── StockService.java # gRPC service implementation
-│ │ │ ├── StockClient.java # gRPC client (non-blocking)
-│ │ │ └── StockController.java # REST controller for /api/stream
-│ ├── resources/
-│ │ └── application.properties # gRPC and Spring port configs
-│ └── proto/
-│ └── stock.proto # gRPC service and message definitions
-└── pom.xml
 
 **2.Generate gRPC Java Code**
 mvn clean compile
